@@ -1,0 +1,28 @@
+<div class="col-md-6">
+    <h2>Listado de usuarios</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="hidden">Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Contraseña</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td class="hidden">{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.surname}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.password}}</td>
+                <td>{{user.date}}</td>
+                <td><button class="btn btn-danger" (click)="deleteUser(user)">Borrar usuario</button></td>
+                <td><button class="btn btn-danger" (click)="deleteUser(user)">Borrar usuario</button></td>
+                <td><button class="btn btn-danger" (click)="deleteUser(user)">Borrar usuario</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
