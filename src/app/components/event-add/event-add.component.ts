@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { EventService } from 'src/app/services/event.service';
 import { Event } from 'src/app/models/event.model';
 
-Component({
+@Component({
   selector: 'app-event-add',
   templateUrl: './event-add.component.html',
   styleUrls: ['./event-add.component.scss']

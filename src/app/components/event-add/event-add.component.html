@@ -1,1 +1,63 @@
-<p>event-add works!</p>
+<div class="col-md-6">
+    <h2 class="text-center">Añadir evento</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" [(ngModel)]="event.name" placeholder="Nombre" name="name" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="shortDescription">Descripción:</label>
+            <input type="text" [(ngModel)]="event.shortDescription" placeholder="Descripción" name="shortDescription" class="form-control" id="shortDescription" required>
+        </div>
+        <div class="form-group">
+            <label for="shortDescription">Descripción ampliada:</label>
+            <input type="text" [(ngModel)]="event.extendedDescription" placeholder="Descripción ampliada" name="extendedDescription" class="form-control" id="extendedDescription" required>
+        </div>
+        <div class="form-group">
+            <label for="dateEvent">Fecha:</label>
+            <input type="date" [(ngModel)]="event.dateEvent" placeholder="Fecha del evento" name="dateEvent"
+                class="form-control" id="dateEvent" required>
+        </div>
+        <div class="form-group">
+            <label for="timeEvent">Hora:</label>
+            <input type="datetime" [(ngModel)]="event.timeEvent" placeholder="Hora" name="timeEvent" class="form-control"
+                id="timeEvent" required>
+        </div>
+        <div class="form-group">
+            <label for="priceRange">Precio:</label>
+            <input type="number" [(ngModel)]="event.priceRange" placeholder="Precio" name="priceRange" class="form-control"
+                id="priceRange" required>
+        </div>
+        <div class="form-group">
+            <label for="rules">Reglas:</label>
+            <input type="text" [(ngModel)]="event.rules" placeholder="Reglas" name="rules" class="form-control"
+                id="rules" required>
+        </div>
+        <div class="form-group">
+            <label for="nameRoom">Sala:</label>
+            <input type="text" [(ngModel)]="event.nameRoom" placeholder="Sala" name="nameRoom" class="form-control"
+                id="nameRoom" required>
+        </div>
+        <div class="form-group">
+            <label for="cityRoom">Ciudad:</label>
+            <input type="text" [(ngModel)]="event.cityRoom" placeholder="Ciudad" name="cityRoom" class="form-control"
+                id="cityRoom" required>
+        </div>
+        <div class="form-group">
+            <label for="addressRoom">Dirección:</label>
+            <input type="text" [(ngModel)]="event.addressRoom" placeholder="Dirección" name="addressRoom" class="form-control"
+                id="addressRoom" required>
+        </div>
+        <div class="form-group">
+            <label for="roomType">Tipo de sala:</label>
+            <input type="text" [(ngModel)]="event.roomType" placeholder="Tipo de sala" name="roomType" class="form-control"
+                id="roomType" required>
+        </div>
+        <div class="form-group">
+            <label for="capacityRoom">Capacidad:</label>
+            <input type="number" [(ngModel)]="event.capacityRoom" placeholder="Capacidad" name="capacityRoom" class="form-control"
+                id="capacityRoom" required>
+        </div>
+        <button class="btn btn-success" (click)="createEvent()">Crear evento</button>
+    </form>
+</div>

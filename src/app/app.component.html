@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div style="text-align:center">
     <h1>{{ title }}</h1>
     <h3><small class="text-muted">Proyecto 3 / Front-End con Angular</small></h3>
@@ -7,4 +7,31 @@
   <button type="button" class="btn btn-primary btn-sm" routerLink="/users">Usuarios</button>
   <hr>
   <router-outlet></router-outlet>
+</div> -->
+<div class="container">
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">{{title}}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/events">Eventos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" routerLink="/users">Usuarios</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div style="text-align:center"><router-outlet></router-outlet></div>
+  </div>
 </div>
