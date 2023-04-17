@@ -7,11 +7,13 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './services/user.service';
+import { UserAddComponent } from './components/user-add/user-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserListComponent
+    UserListComponent,
+    UserAddComponent
   ],
   imports: [
     BrowserModule,

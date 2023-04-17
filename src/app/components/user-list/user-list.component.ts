@@ -30,5 +30,5 @@ export class UserListComponent {
         this.users = this.users.filter(u => u !== user);
       })
   };
-  
+
 }
