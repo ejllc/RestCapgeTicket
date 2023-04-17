@@ -1,1 +1,41 @@
-<p>event-list works!</p>
+<div class="col-md-6">
+    <h2>Listado de eventos</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="hidden">Id</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Descripción larga</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Precio (€)</th>
+                <th>Reglas</th>
+                <th>Nombre sala</th>
+                <th>Ciudad</th>
+                <th>Dirección</th>
+                <th>Tipo</th>
+                <th>Capacidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let event of events">
+                <td class="hidden">{{event}}</td>
+                <td>{{event.name}}</td>
+                <td>{{event.shortDescription}}</td>
+                <td>{{event.extendedDescription}}</td>
+                <td>{{event.dateEvent}}</td>
+                <td>{{event.timeEvent}}</td>
+                <td>{{event.priceRange}}</td>
+                <td>{{event.rules}}</td>
+                <td>{{event.nameRoom}}</td>
+                <td>{{event.cityRoom}}</td>
+                <td>{{event.addressRoom}}</td>
+                <td>{{event.roomType}}</td>
+                <td>{{event.capacityRoom}}</td>
+                <!--<td><button class="btn btn-info btn-sm" (click)="updateUser(user.id)">Editar</button></td>-->
+                <td><button class="btn btn-danger btn-sm" (click)="deleteEvent(event)">Borrar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

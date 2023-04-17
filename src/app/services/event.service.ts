@@ -16,7 +16,7 @@ export class EventService {
     return this.http.get<Event[]>(this.eventUrl)
   }
 
-  public deleteVent(event: Event) {
+  public deleteEvent(event: Event) {
     return this.http.delete(this.eventUrl + "/" + event.id);
   }
 

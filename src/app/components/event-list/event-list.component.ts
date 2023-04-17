@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Event } from 'src/app/models/event.model';
 import { EventService } from 'src/app/services/event.service'
 
 @Component({
@@ -7,6 +8,7 @@ import { EventService } from 'src/app/services/event.service'
   templateUrl: './event-list.component.html',
   styleUrls: ['./event-list.component.scss']
 })
+
 export class EventListComponent {
 
   events: Event[] = [];
@@ -18,6 +20,14 @@ export class EventListComponent {
   ngOnInit(): void {
     this.eventService.getEvents()
     .subscribe(data => {
-      this.events = this.events.filter(e => e !== event)})
+      this.events = data;
+    });
   }
+
+  deleteEvent(event: Event): void {
+    this.eventService.deleteEvent(event)
+      .subscribe(data => {
+        this.events = this.events.filter(e => e !== event);
+      })
+  };
 }
