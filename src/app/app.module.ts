@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { UserService } from './services/user.service';
 import { UserAddComponent } from './components/user-add/user-add.component';
+import { EventListComponent } from './components/event-list/event-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
-    UserAddComponent
+    UserAddComponent,
+    EventListComponent
   ],
   imports: [
     BrowserModule,
